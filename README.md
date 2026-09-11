@@ -7,7 +7,17 @@ It auto-generates a full tag list from the genres already assigned to the releas
 ## What it does
 
 - **Autotags releases**: reads the Primary (and optionally Secondary) genres already set on the release, then walks a large genre-relationship map to add every relevant parent/related tag (e.g. tagging `black metal` also adds `metal`; tagging a Drill subgenre adds `drill`, `hip hop`, etc.), plus the release year, then saves the tag field automatically
+
+  > [!WARNING]
+  > The autotag buttons **overwrite** the current Tags field and save it immediately — there's no confirmation step.
+
+
+  > [!TIP]
+  > If you have hand-tweaked tags, run autotag first and adjust manually afterwards, not the other way around.
+  
 - Adds three quick-action buttons next to the catalog block: **Primary**, **Pri + Sec**, and **Exclude from upcomings**
+> [!WARNING]
+> The **Exclude from upcomings** action, being a copy of the "Exclude release" action set in "New music", has no confirmation step and is **irreversible** from what I know.
 - Merges the "My Catalog" panel (rating, tags, labels, list, catalog/format, listens/review/misc) into the `album_info` table instead of leaving it in a separate section below
 - Pulls in release **labels** (with issue counts) next to the catalog info
 - Companion userstyle trims dead space, removes clutter (buy button, prev/next nav, section headers), fixes the truncation of list names and tightens up the tracklist/credits layout for a denser, more compact release page
