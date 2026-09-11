@@ -1,3 +1,13 @@
+/* ==UserStyle==
+@name           Release Page Tweaks - RateYourMusic
+@namespace      iN008
+@description    Assortment of release page modifications, for use with site's compact mode.
+@author         iN008
+@license        MIT
+@version        1.0
+@downloadURL    https://update.greasyfork.org/scripts/435653/Release%20Page%20Tweaks%20-%20RateYourMusic.user.css
+@updateURL      https://update.greasyfork.org/scripts/435653/Release%20Page%20Tweaks%20-%20RateYourMusic.meta.css
+==/UserStyle== */
 
 @-moz-document url-prefix("https://rateyourmusic.com/") {
 
