@@ -29,7 +29,7 @@ It auto-generates a full tag list from the genres already assigned to the releas
 > - Some of the biggest parent genres (`rock`, `metal`, `electronic`, `regional music`) are excluded by choice. `Scenes and movements` are excluded too.
 > - Of course if an album has _incorrect_ genre tags, the autotags will reflect that.
   
-- Merges the "My Catalog" panel (rating, set listening, tags, issues, list, catalog/format, review/misc) into the `album_info` table instead of leaving it in a separate section below, and add some buttons as faster shortcuts (on wishlist, not catalogued, add to list)
+- Merges the "My Catalog" panel (rating, set listening, tags, issues, list, catalog/format, review/more) into the `album_info` table instead of leaving it in a separate section below, and add some buttons as faster shortcuts (on wishlist, not catalogued, add to list)
 - Pulls in release **labels** (with issue counts) next to the catalog info
 - Companion userstyle trims dead space, removes clutter (buy button, prev/next nav, section headers), fixes the truncation of list names and tightens up the tracklist/credits layout for a denser, more compact release page
 
