@@ -1,13 +1,3 @@
-/* ==UserStyle==
-@name           Release Page Tweaks - RateYourMusic
-@namespace      iN008
-@description    Assortment of release page modifications, for use with site's compact mode.
-@author         iN008
-@license        MIT
-@version        1.0
-@downloadURL    https://update.greasyfork.org/scripts/435653/Release%20Page%20Tweaks%20-%20RateYourMusic.user.css
-@updateURL      https://update.greasyfork.org/scripts/435653/Release%20Page%20Tweaks%20-%20RateYourMusic.meta.css
-==/UserStyle== */
 
 @-moz-document url-prefix("https://rateyourmusic.com/") {
 
@@ -73,6 +63,7 @@
         border-bottom: none !important;
         border-top: none !important;
     }
+    
     #my_catalog {
         margin-right: 10px !important;
         margin-left: 10px !important;
@@ -148,6 +139,7 @@
     .section_issues.section_outer {
         display: none;
     }
+    
     .btn.blue_btn {
         min-width: 3em;
         text-align: center;
@@ -159,43 +151,46 @@
         color: var(--mono-4);
         font-weight: normal!important;
     }
-    /* il contenitore torna normale */
+
     .release_my_catalog {
         display: block !important;
         line-height: 2.3;
     }
 
-    /* tutti i blocchi principali in linea, ma “a blocchetto” */
     .release_my_catalog > div:not(.release_touch_guidance) {
         display: inline-block;
         vertical-align: middle;
     }
 
-    /* il nostro "a capo" fisico */
     .rym-break {
         display: block !important;
         width: 100% !important;
         height: 0;
     }
+    
     .rym-integrated td > div:not(#add_to_list_lists) {
         display: inline-block;
         margin-right: 8px;
         line-height: 2.3;
     }
+    
     .release_my_catalog {
         max-height: 0px;
     }
-    /* Reset totale per tutti gli elementi dentro le righe integrate */
+
     .rym-integrated td * :not(.rating_stars) {
         margin: 0 0 0 0 !important;
     }
+    
     #addtolist {
         float: left!important;
     }
+    
     #add_to_list_lists {
         width: 400px;
         left: 1.2em;
     }
+    
     #add_to_list_lists a {
         padding: 0 5px 0 5px;
         overflow: visible;
