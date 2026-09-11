@@ -23,7 +23,9 @@ It auto-generates a full tag list from the genres already assigned to the releas
 > [!NOTE]
 > The genre map reflects RYM's official genre hierarchy at the time of writing; since it's hard-coded into the script, it will need occasional updates as RYM adds or reorganizes genres.
 > 
-> Some of the biggest parent genres (`rock`, `metal`, `electronic`, `regional music`) are excluded by choice. `Scenes and movements` are excluded too. 
+> Some of the biggest parent genres (`rock`, `metal`, `electronic`, `regional music`) are excluded by choice. `Scenes and movements` are excluded too.
+>
+> Of course if an album has "incorrect" genre tags, the autotags will reflect that.
   
 - Merges the "My Catalog" panel (rating, tags, labels, list, catalog/format, listens/review/misc) into the `album_info` table instead of leaving it in a separate section below
 - Pulls in release **labels** (with issue counts) next to the catalog info
