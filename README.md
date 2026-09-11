@@ -25,13 +25,11 @@ It auto-generates a full tag list from the genres already assigned to the releas
 > If you have hand-tweaked tags, run autotag first and adjust manually afterwards, not the other way around.
 
 > [!NOTE]
-> The genre map reflects RYM's official genre hierarchy at the time of writing; since it's hard-coded into the script, it will need occasional updates as RYM adds or reorganizes genres.
-> 
-> Some of the biggest parent genres (`rock`, `metal`, `electronic`, `regional music`) are excluded by choice. `Scenes and movements` are excluded too.
->
-> Of course if an album has "incorrect" genre tags, the autotags will reflect that.
+> - The genre map reflects RYM's official genre hierarchy at the time of writing; since it's hard-coded into the script, it will need occasional updates as RYM adds or reorganizes genres.
+> - Some of the biggest parent genres (`rock`, `metal`, `electronic`, `regional music`) are excluded by choice. `Scenes and movements` are excluded too.
+> - Of course if an album has _incorrect_ genre tags, the autotags will reflect that.
   
-- Merges the "My Catalog" panel (rating, tags, labels, list, catalog/format, listens/review/misc) into the `album_info` table instead of leaving it in a separate section below
+- Merges the "My Catalog" panel (rating, set listening, tags, issues, list, catalog/format, review/misc) into the `album_info` table instead of leaving it in a separate section below, and add some buttons as faster shortcuts (on wishlist, not catalogued, add to list)
 - Pulls in release **labels** (with issue counts) next to the catalog info
 - Companion userstyle trims dead space, removes clutter (buy button, prev/next nav, section headers), fixes the truncation of list names and tightens up the tracklist/credits layout for a denser, more compact release page
 
