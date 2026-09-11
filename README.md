@@ -4,15 +4,19 @@ My lazy a** was very tired of typing out every parent genre by hand — and I ju
 
 It auto-generates a full tag list from the genres already assigned to the release (adding every relevant parent/related genre automatically), and merges the whole "My Catalog" panel directly into the release info table for a much more compact page.
 
-## How does it look
+## Before / After
 
-![What it does](https://i.imgur.com/Y7DgbJM.png)
+| Before                                     | After                                     |
+| ------------------------------------------ | ----------------------------------------- |
+| ![Before](https://i.imgur.com/WtcJMDJ.png) | ![After](https://i.imgur.com/93FEezL.png) |
 
 ## What it does
 
 - **Autotags releases**: reads the Primary (and optionally Secondary) genres already set on the release, then walks a large genre-relationship map to add every relevant parent/related tag (e.g. tagging `math pop` also adds `math rock` and `indie rock` cause nested in both; `indie rock` also adds `alternative rock` cause nested in it and so on), plus the release year, then saves the tag field automatically
 
-  ![What it does](https://i.imgur.com/aQ5qMFS.gif)
+<p align="center">
+  <img src="https://i.imgur.com/aQ5qMFS.gif" width="80%">
+</p>
 
 > [!WARNING]
 > The autotag buttons **overwrite** the current Tags field and save it immediately — there's no confirmation step.
