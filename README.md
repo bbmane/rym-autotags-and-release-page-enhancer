@@ -2,7 +2,7 @@
 
 Tagging a release on RateYourMusic means digging through a huge genre tree and typing out every parent genre by hand — and the "My Catalog" panel (rating, tags, labels, list, catalog status...) is scattered in a bunch of separate boxes below the tracklist. This userscript (+ companion style) fixes both.
 
-It auto-generates a full tag list from the genres you've already assigned (adding every relevant parent/related genre automatically), and merges the whole "My Catalog" panel directly into the release info table for a much more compact page.
+It auto-generates a full tag list from the genres already assigned to the release (adding every relevant parent/related genre automatically), and merges the whole "My Catalog" panel directly into the release info table for a much more compact page.
 
 ## What it does
 
@@ -16,8 +16,9 @@ It auto-generates a full tag list from the genres you've already assigned (addin
 
 1. Install a userscript manager such as [Tampermonkey](https://www.tampermonkey.net/).
 2. [Click here to install the script](https://raw.githubusercontent.com/bbmane/rym-release-page-enhancer/main/rym-release-page-enhancer.user.js).
-3. *(Optional but recommended)* Install a userstyle manager such as [Stylus](https://add0n.com/stylus.html) and [click here to install the companion style](https://raw.githubusercontent.com/bbmane/rym-release-page-enhancer/main/rym-release-page-enhancer.user.css).
-4. Visit any RateYourMusic release page — the extra buttons and merged catalog panel will appear automatically.
+3. Install a userstyle manager such as [Stylus](https://add0n.com/stylus.html).
+4. [click here to install the companion style](https://raw.githubusercontent.com/bbmane/rym-release-page-enhancer/main/rym-release-page-enhancer.user.css).
+5. Visit any RateYourMusic release page — the extra buttons and merged catalog panel will appear automatically.
 
 ## Notes
 
