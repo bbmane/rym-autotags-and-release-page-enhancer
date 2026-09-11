@@ -1,4 +1,4 @@
-# RYM Autotags and Release Page Enhancer
+# RYM Genre Autotags and Release Page Enhancer
 
 My lazy a** was very tired of typing out every parent genre by hand — and I just hated how the "My Catalog" panel (rating, tags, labels, list, catalog status...) was scattered in a bunch of separate boxes below the tracklist. This userscript (+ companion style) fixes both.
 
