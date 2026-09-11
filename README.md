@@ -4,12 +4,6 @@ My lazy a** was very tired of typing out every parent genre by hand — and I ju
 
 It auto-generates a full tag list from the genres already assigned to the release (adding every relevant parent/related genre automatically), and merges the whole "My Catalog" panel directly into the release info table for a much more compact page. The style is kept consistent.
 
-## Before / After
-
-| Before                                     | After                                     |
-| ------------------------------------------ | ----------------------------------------- |
-| ![Before](https://i.imgur.com/WtcJMDJ.png) | ![After](https://i.imgur.com/93FEezL.png) |
-
 ## What it does
 
 - **Autotags releases**: reads the Primary (and optionally Secondary) genres already set on the release, then walks a large genre-relationship map to add every relevant parent/related tag (e.g. tagging `math pop` also adds `math rock` and `indie rock` cause nested in both; `indie rock` also adds `alternative rock` cause nested in it and so on), plus the release year, then saves the tag field automatically
@@ -32,6 +26,12 @@ It auto-generates a full tag list from the genres already assigned to the releas
 - Merges the "My Catalog" panel (rating, set listening, tags, issues, catalog/format, review/more) into the `album_info` table instead of leaving it in a separate section below, and add some buttons as faster shortcuts (on wishlist, not catalogued, add to list)
 - Pulls in release **labels** (with issue counts) next to the catalog info
 - Companion userstyle trims dead space, removes clutter (buy button, prev/next nav, section headers), fixes the truncation of list names and tightens up the tracklist/credits layout for a denser, more compact release page
+
+## Before / After
+
+| Before                                     | After                                     |
+| ------------------------------------------ | ----------------------------------------- |
+| ![Before](https://i.imgur.com/WtcJMDJ.png) | ![After](https://i.imgur.com/93FEezL.png) |
 
 ## Installation
 
