@@ -1,0 +1,208 @@
+/* ==UserStyle==
+@name           Release Page Tweaks - RateYourMusic
+@namespace      iN008
+@description    Assortment of release page modifications, for use with site's compact mode.
+@author         iN008
+@license        MIT
+@version        1.0
+@downloadURL    https://update.greasyfork.org/scripts/435653/Release%20Page%20Tweaks%20-%20RateYourMusic.user.css
+@updateURL      https://update.greasyfork.org/scripts/435653/Release%20Page%20Tweaks%20-%20RateYourMusic.meta.css
+==/UserStyle== */
+
+@-moz-document url-prefix("https://rateyourmusic.com/") {
+
+    /* --------------------------------------------------
+       REMOVE ELEMENTS
+    -------------------------------------------------- */
+    .buy_button,
+    /* "Buy This Release" button */s
+    .section_release_navigation,
+    /* Prev/next navigation */
+    .release_page_header,
+    /* Section headers */
+    div[id="release_touch_catalog_guidance"],
+    #better-rym {
+        display: none;
+    }
+
+    /* --------------------------------------------------
+       FLAG SIZE
+    -------------------------------------------------- */
+    .ui_flag img {
+        width: 1.68em !important;
+        height: 1.26em;
+    }
+
+    
+     /* --------------------------------------------------
+       LIST NAME TRUNCATION
+    -------------------------------------------------- */
+    div.list_name {
+        white-space: normal;
+        overflow: visible;
+        text-overflow: clip;
+    }
+    
+    /* --------------------------------------------------
+       GENERAL SPACING REDUCTION
+    -------------------------------------------------- */
+    .section_outer {
+        padding: 8px !important;
+    }
+
+    /* Optional extra padding for main info
+    .section_main_info {
+        padding-left: 20px !important;
+    }
+    */
+    /* --------------------------------------------------
+       FONT SIZE ADJUSTMENTS
+    -------------------------------------------------- */
+    table.album_info,
+    table.film_info {
+        font-size: 1.02em;
+    }
+
+    /* Remove padding leftover from hidden guidance */
+    /*.section_my_catalog.section_outer {
+        padding-bottom: 0 !important;
+    }*/
+    /* Remove separator bars */
+    .section_my_catalog.section_outer,
+    .section_outer {
+        border-bottom: none !important;
+        border-top: none !important;
+    }
+    #my_catalog {
+        margin-right: 10px !important;
+        margin-left: 10px !important;
+    }
+    /* --------------------------------------------------
+       TRACKLIST
+    -------------------------------------------------- */
+    ul.tracks li.track {
+        min-height: 0;
+        padding-left: 0 !important;
+    }
+
+    .tracklist_title {
+        font-size: 1em;
+    }
+
+    .track_rating_avg,
+    .tracklist_num,
+    .tracklist_title {
+        line-height: 1em;
+    }
+
+    span.tracklist_total {
+        line-height: 2em !important;
+    }
+
+    /* --------------------------------------------------
+       CREDITS
+    -------------------------------------------------- */
+    ul.credits {
+        padding: 0.3em;
+    }
+
+    /* Expand buttons */
+    .expand_button {
+        font-weight: normal;
+        font-size: 1em;
+        line-height: 1 !important;
+        padding: 0.5em !important;
+    }
+
+    /* Compact issues section */
+    .issues {
+        font-size: 0.9em;
+    }
+
+    /* --------------------------------------------------
+       MAX-WIDTH FIXES
+    -------------------------------------------------- */
+    div[style="max-width:1700px; margin: 0px auto;"],
+    /* Use full window width */
+    div.comments,
+    /* Sidebar comments */
+    .release_right_column .page_section {
+        max-width: none !important;
+    }
+
+    /* --------------------------------------------------
+       LEFT COLUMN SPACING
+    -------------------------------------------------- */
+    .section_lists,
+    .section_videos,
+    .section_discussion,
+    .section_comments,
+    .section_suggestions,
+    .section_credits,
+    .section_cast,
+    .section_crew {
+        padding-top: 0;
+        padding-bottom: 5px;
+    }
+
+    .section_issues.section_outer {
+        display: none;
+    }
+    .btn.blue_btn {
+        min-width: 3em;
+        text-align: center;
+        background-color: var(--mono-db);
+        border-radius: 4px;
+        border: 0px;
+        line-height: 2.3em;
+        font-size: .8em;
+        color: var(--mono-4);
+        font-weight: normal!important;
+    }
+    /* il contenitore torna normale */
+    .release_my_catalog {
+        display: block !important;
+        line-height: 2.3;
+    }
+
+    /* tutti i blocchi principali in linea, ma “a blocchetto” */
+    .release_my_catalog > div:not(.release_touch_guidance) {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    /* il nostro "a capo" fisico */
+    .rym-break {
+        display: block !important;
+        width: 100% !important;
+        height: 0;
+    }
+    .rym-integrated td > div:not(#add_to_list_lists) {
+        display: inline-block;
+        margin-right: 8px;
+        line-height: 2.3;
+    }
+    .release_my_catalog {
+        max-height: 0px;
+    }
+    /* Reset totale per tutti gli elementi dentro le righe integrate */
+    .rym-integrated td * :not(.rating_stars) {
+        margin: 0 0 0 0 !important;
+    }
+    #addtolist {
+        float: left!important;
+    }
+    #add_to_list_lists {
+        width: 400px;
+        left: 1.2em;
+    }
+    #add_to_list_lists a {
+        padding: 0 5px 0 5px;
+        overflow: visible;
+    }
+    .info_hdr .rym-issues-count {
+        font-size: 90%;
+        color: #777;
+    }
+
+}
