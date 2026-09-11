@@ -1,6 +1,6 @@
 # RYM Genre Autotags and Release Page Enhancer
 
-My lazy a** was very tired of typing out every parent genre by hand — and I just hated how the "My Catalog" panel (rating, tags, labels, list, catalog status...) was scattered in a bunch of separate boxes below the tracklist. This userscript (+ companion style) fixes both.
+My lazy a** was very tired of typing out every parent genre by hand — and I just hated how the "My Catalog" panel (rating, tags, labels, list, catalog status...) was scattered in a bunch of separate boxes below the album details. This userscript (+ companion style) fixes both.
 
 It auto-generates a full tag list from the genres already assigned to the release (adding every relevant parent/related genre automatically), and merges the whole "My Catalog" panel directly into the release info table for a much more compact page.
 
