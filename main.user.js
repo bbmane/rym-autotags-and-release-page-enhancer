@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         RYM Genre Autotags and Release Page Enhancer
 // @namespace    http://tampermonkey.net/
-// @version      1.0
+// @version      1.0.1
 // @description  Autotags + My Catalog
 // @author       bbmane
 // @match        https://rateyourmusic.com/release/*
@@ -885,11 +885,24 @@
             buildTags(genres);
         });
 
-        const IDAlbum = document.querySelector('#column_container_right .album_title input').value.match(/\d+/)[0];
+        if (!document.getElementById('rym-toggle-issues-style')) {
+            const style = document.createElement('style');
+            style.id = 'rym-toggle-issues-style';
+            style.textContent = `.section_issues.section_outer.rym-hidden { display: none !important; }`;
+            document.head.appendChild(style);
+        }
 
-        const btnExclude = makeBtn("Exclude from upcomings", () => {
-            rym.request.post("AddUpcomingExclusion", { object: 'release', assoc_id: IDAlbum }, null, "script");
+        // Issues hidden by default
+        document.querySelectorAll('.section_issues.section_outer').forEach(el => el.classList.add('rym-hidden'));
+
+        const btnToggleIssues = makeBtn("Toggle Issues", (e) => {
+            e.stopPropagation();
+            const issuesDivs = document.querySelectorAll('.section_issues.section_outer');
+            if (!issuesDivs.length) return;
+            const shouldHide = !issuesDivs[0].classList.contains('rym-hidden');
+            issuesDivs.forEach(el => el.classList.toggle('rym-hidden', shouldHide));
         });
+        window.btnToggleIssues = btnToggleIssues;
 
         catalogDiv.after(btnMain);
         btnMain.after(btnMainSec);
@@ -970,7 +983,7 @@
         ROWS.push(
             ["List", ["#addtolist"]],
             ["Catalog", ["__BTN3__","__COPY_WISHLIST_BTN__","__COPY_NOTCOLLECTED_BTN__",".my_catalog_catalog", ".my_catalog_format"]],
-            ["Misc", [".my_catalog_listening",".my_catalog_review",".my_catalog_rate_tracks",".my_catalog_more",".my_catalog_bump"]]
+            ["Misc", [".my_catalog_listening",".my_catalog_review",".my_catalog_rate_tracks","__TOGGLE_ISSUES_BTN__", ".my_catalog_more",".my_catalog_bump"]]
         );
 
         ROWS.forEach(([label, selectors]) => {
@@ -1037,6 +1050,11 @@
                     } else {
                         td.textContent = "Not collected button not found";
                     }
+                    return;
+                }
+
+                if (sel === "__TOGGLE_ISSUES_BTN__" && window.btnToggleIssues) {
+                    td.appendChild(window.btnToggleIssues);
                     return;
                 }
 
