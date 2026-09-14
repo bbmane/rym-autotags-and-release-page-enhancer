@@ -4,7 +4,7 @@
 @description    Assortment of release page modifications, for use with site's compact mode.
 @author         iN008
 @license        MIT
-@version        1.0
+@version        1.0.1
 @downloadURL    https://update.greasyfork.org/scripts/435653/Release%20Page%20Tweaks%20-%20RateYourMusic.user.css
 @updateURL      https://update.greasyfork.org/scripts/435653/Release%20Page%20Tweaks%20-%20RateYourMusic.meta.css
 ==/UserStyle== */
@@ -144,10 +144,6 @@
     .section_crew {
         padding-top: 0;
         padding-bottom: 5px;
-    }
-
-    .section_issues.section_outer {
-        display: none;
     }
     
     .btn.blue_btn {
