@@ -40,3 +40,7 @@ It auto-generates a full tag list from the genres already assigned to the releas
 3. Install a userstyle manager such as [Stylus](https://add0n.com/stylus.html).
 4. [Click here to install the companion style](https://raw.githubusercontent.com/bbmane/rym-autotags-and-release-page-enhancer/main/main.user.css).
 5. Visit any RateYourMusic release page — the extra buttons and merged catalog panel will appear automatically.
+
+---
+
+Star this repo if it helped you :).
