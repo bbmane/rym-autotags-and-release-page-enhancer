@@ -205,5 +205,15 @@
         font-size: 90%;
         color: #777;
     }
+    /*
+    RIGHT COLUMN
+    */
+    /* #column_container_right > div.section_main_info.section_outer > div > table.album_info_outer > tbody > tr > td:nth-child(1) > table > tbody > tr.release_genres > td:nth-child(3),
+    #column_container_right > div.section_main_info.section_outer > div > table.album_info_outer > tbody > tr > td:nth-child(1) > table > tbody > tr.release_descriptors > td:nth-child(3) {
+        
+    } */
+    #column_container_right > div.section_main_info.section_outer > div > table.album_info_outer > tbody > tr > td:nth-child(2) {
+        width: 0% !important;
+    }
 
 }
