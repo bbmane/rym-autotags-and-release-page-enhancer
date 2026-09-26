@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.0.2] - 2026-09-27
+### Updated
+- Genre tree till the most recent addition, _"Marinera norteña"_
+
 ## [1.0.1] - 2026-09-14
 ### Added
 - "Toggle Issues" button to show/hide the `.section_issues.section_outer` section
