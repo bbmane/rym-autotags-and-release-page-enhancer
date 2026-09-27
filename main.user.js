@@ -1224,6 +1224,46 @@
         return null;
     }
 
+    function makeGenreDescriptorHeadersClickable() {
+        const table = document.querySelector('.album_info tbody');
+        if (!table) return false;
+
+        const genreLink = document.querySelector('a.genre_descriptor_vote_btn[href*="/rgenre/set"]');
+        const descriptorLink = document.querySelector('a.genre_descriptor_vote_btn[href*="/rdescriptor/set"]');
+
+        let genreDone = false;
+        let descriptorDone = false;
+
+        table.querySelectorAll('tr').forEach(tr => {
+            const th = tr.querySelector('th.info_hdr');
+            if (!th) return;
+
+            const label = th.textContent.trim();
+
+            if (label === "Genres") {
+                if (th.querySelector('a')) {
+                    genreDone = true;
+                } else if (genreLink) {
+                    th.innerHTML = `<a href="${genreLink.getAttribute('href')}" title="vote for genres">Genres</a>`;
+                    genreLink.remove();
+                    genreDone = true;
+                }
+            }
+
+            if (label === "Descriptors") {
+                if (th.querySelector('a')) {
+                    descriptorDone = true;
+                } else if (descriptorLink) {
+                    th.innerHTML = `<a href="${descriptorLink.getAttribute('href')}" title="vote for descriptors">Descriptors</a>`;
+                    descriptorLink.remove();
+                    descriptorDone = true;
+                }
+            }
+        });
+
+        return genreDone && descriptorDone;
+    }
+
     function moveCatalogIntoTable() {
         const table = document.querySelector('.album_info tbody');
         const catalog = document.querySelector('.release_my_catalog');
@@ -1341,7 +1381,10 @@
     }
 
     const interval = setInterval(() => {
-        if (moveCatalogIntoTable()) {
+        const catalogDone = moveCatalogIntoTable();
+        const headersDone = makeGenreDescriptorHeadersClickable();
+
+        if (catalogDone && headersDone) {
             clearInterval(interval);
         }
     }, 200);
