@@ -43,4 +43,4 @@ It auto-generates a full tag list from the genres already assigned to the releas
 
 ##
 
-Star this repo if it helped you :).
+<sub>Star this repo if you like the project :)</sub>
