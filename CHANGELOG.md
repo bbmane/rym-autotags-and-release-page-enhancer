@@ -1,5 +1,9 @@
 # Changelog
 
+## ✨ 2026-10-10
+### Updated
+- Genre tree till the most recent addition, _"Tongan Music"_
+
 ## ✨ [1.0.2] - 2026-09-27
 ### Added
 - Incorporated the "Vote for genres" and "Vote for descriptors" buttons in the main table, removed the old & ugly checkmarks
