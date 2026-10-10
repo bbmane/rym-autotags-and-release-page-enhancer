@@ -1,11 +1,3 @@
-// https://rateyourmusic.com/genres/
-
-// Trova tutti i pulsanti "Show subgenres" e li clicca in sequenza
-document.querySelectorAll('.button_expand').forEach(button => {
-    button.click();
-});
-
-
 (() => {
   const childrenMap = new Map(); // parent -> Set(children)
   const parentMap = new Map();   // child -> parent
@@ -14,7 +6,7 @@ document.querySelectorAll('.button_expand').forEach(button => {
   // Helper per ripulire il testo del genere
   const clean = text => text ? text.trim().toLowerCase().replace(/\s+/g, ' ') : '';
 
-  // 1. Scansione di tutti i nodi lista in ordine DOM (la tua logica funzionante)
+  // 1. Scansione di tutti i nodi lista in ordine DOM
   const items = document.querySelectorAll('li, div.genre, tr, .genre_row');
 
   items.forEach(el => {
@@ -113,11 +105,12 @@ document.querySelectorAll('.button_expand').forEach(button => {
     subParents.sort((a, b) => getDepth(b) - getDepth(a));
 
     subParents.forEach(p => {
-      const children = Array.from(childrenMap.get(p));
-      // Includiamo sia il genitore che i suoi figli nella proprietà list
-      const fullList = Array.from(new Set([p, ...children])).sort();
+      // Prende solo i figli (senza includere 'p' stesso)
+      const childrenOnly = Array.from(childrenMap.get(p)).sort();
       
-      output += `  { list: ${JSON.stringify(fullList)}, add: () => ["${p}"] },\n`;
+      if (childrenOnly.length > 0) {
+        output += `  { list: ${JSON.stringify(childrenOnly)}, add: () => ["${p}"] },\n`;
+      }
     });
   });
 
@@ -130,7 +123,3 @@ document.querySelectorAll('.button_expand').forEach(button => {
     console.log(`✅ GROUP_MAP generata con successo e copiata negli appunti!`);
   }
 })();
-
-
-
-
