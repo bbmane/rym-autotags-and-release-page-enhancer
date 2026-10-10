@@ -216,4 +216,13 @@
         width: 0% !important;
     }
 
+        /* TAGS */
+    .my_catalog_tags .tag_dlg {
+        width: 800px !important;
+    }
+    
+    input.tag_tags {
+        width: 790px !important;
+    }
+
 }
